@@ -385,7 +385,7 @@ HEADER / NAVBAR SECTION
 }
 
 .hero-text {
-  width: 50%;
+  width: auto;
 }
 
 .hero-text h1 {

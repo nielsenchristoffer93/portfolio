@@ -36,6 +36,15 @@
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .timeline ul li {
+    width: calc(50% - 2px);
+  }
+
+  .timeline ul li:nth-child(odd),
+  .timeline ul li:nth-child(even) {
+    margin: 0;
+  }
 }
 
 /* On screens that are 1199px or less */
