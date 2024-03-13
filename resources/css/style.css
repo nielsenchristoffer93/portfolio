@@ -378,13 +378,14 @@ HEADER / NAVBAR SECTION
   position: relative;
   display: flex;
   height: 100svh;
+  width: 100svw;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
 .hero-text {
-  min-width: 40%;
+  width: 50%;
 }
 
 .hero-text h1 {
@@ -557,7 +558,7 @@ HEADER / NAVBAR SECTION
 }
 
 /*=================================
-SKILLS SECTION
+ABOUT SECTION
 =================================*/
 
 .flex-container {
@@ -569,7 +570,7 @@ SKILLS SECTION
 }
 
 .about-section__profile-img {
-  max-width: 40rem;
+  width: 40rem;
   opacity: 0;
 }
 
@@ -577,20 +578,23 @@ SKILLS SECTION
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 30%;
+  width: 40%;
   height: 40rem;
   opacity: 0;
 }
 
-.about-section__text-container h3,
-.skill h3 {
+.about-section__text-container h3 {
   font-size: 2.4rem;
 }
 
 .about-section__text-container img {
-  width: 20rem;
+  width: 16rem;
   align-self: flex-end;
 }
+
+/*=================================
+SKILLS SECTION
+=================================*/
 
 .grid-container {
   display: grid;
@@ -604,10 +608,14 @@ SKILLS SECTION
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  max-width: 40rem;
+  max-width: 41rem;
   opacity: 0;
+}
+
+.skill h3 {
+  font-size: 2.4rem;
 }
 
 .skill i {
@@ -640,18 +648,19 @@ TIMELINE SECTION
 }
 
 .timeline ul li {
-  width: calc(50% - 2px);
+  width: calc(30% - 2px);
   clear: both;
   opacity: 0;
 }
 
 .timeline ul li:nth-child(odd) {
-  float: left;
+  margin-left: 20%;
   padding-right: 3rem;
 }
 
 .timeline ul li:nth-child(even) {
   float: right;
+  margin-right: 20%;
   padding-left: 3rem;
 }
 

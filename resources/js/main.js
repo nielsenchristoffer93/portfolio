@@ -91,12 +91,16 @@ docReady(function () {
 
 /* --------- LIGHT / DARK MODE TOGGLE --------- */
 const darkModeToggle = document.querySelector(".checkbox-label");
-const img = document.getElementsByClassName("logo")[0];
+const logoImg = document.getElementsByClassName("logo")[0];
+const signatureImage = document.querySelector(".about-section__text-container img");
 let darkMode = false;
 darkModeToggle.addEventListener("click", () => {
   if (!darkMode) {
     // Change logo image.
-    img.src = "./resources/images/CN_New_White.svg";
+    logoImg.src = "./resources/images/CN_New_White.svg";
+
+    // Change signature Image
+    signatureImage.src = "./resources/images/CN_Signature_White.svg"
 
     // Change root colors.
     document.documentElement.style.setProperty(
@@ -173,7 +177,10 @@ darkModeToggle.addEventListener("click", () => {
     darkMode = true;
   } else {
     // Change logo image.
-    img.src = "./resources/images/CN_New_Black.svg";
+    logoImg.src = "./resources/images/CN_New_Black.svg";
+
+    // Change signature Image
+    signatureImage.src = "./resources/images/CN_Signature_Black.svg"
 
     // Change root colors.
     document.documentElement.style.setProperty(
