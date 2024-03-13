@@ -208,6 +208,10 @@
     max-width: 70%;
   }
 
+  .about-section__text-container {
+    height: 55rem;
+  }
+
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: 6;
@@ -263,7 +267,6 @@
   }
 
   .about-section__text-container {
-    height: 60rem;
     width: 100%;
   }
 

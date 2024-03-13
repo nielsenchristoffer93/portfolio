@@ -29,7 +29,7 @@ menuBtn.addEventListener("click", () => {
 const projectFilterItems = document.querySelectorAll(".project-filter li");
 projectFilterItems.forEach(function (projectFilterItem) {
   projectFilterItem.addEventListener("click", (event) => {
-    console.log(event.target);
+    // console.log(event.target);
 
     const clickedItem = event.target; // Get the clicked list item.
     const classNameToAdd = "project-filter-active";
@@ -98,9 +98,11 @@ darkModeToggle.addEventListener("click", () => {
   if (!darkMode) {
     // Change logo image.
     logoImg.src = "./resources/images/CN_New_White.svg";
+    logoImg.alt = "CN_New_White.svg";
 
     // Change signature Image
-    signatureImage.src = "./resources/images/CN_Signature_White.svg"
+    signatureImage.src = "./resources/images/CN_Signature_White.svg";
+    signatureImage.alt = "CN_Signature_White.svg";
 
     // Change root colors.
     document.documentElement.style.setProperty(
@@ -178,9 +180,11 @@ darkModeToggle.addEventListener("click", () => {
   } else {
     // Change logo image.
     logoImg.src = "./resources/images/CN_New_Black.svg";
+    logoImg.alt = "CN_New_Black.svg";
 
     // Change signature Image
-    signatureImage.src = "./resources/images/CN_Signature_Black.svg"
+    signatureImage.src = "./resources/images/CN_Signature_Black.svg";
+    signatureImage.alt = "CN_Signature_Black.svg";
 
     // Change root colors.
     document.documentElement.style.setProperty(
@@ -189,11 +193,11 @@ darkModeToggle.addEventListener("click", () => {
     );
     document.documentElement.style.setProperty(
       "--color-primary-100-rgb",
-      "#5ac3b0"
+      "0, 191, 165"
     );
     document.documentElement.style.setProperty(
       "--color-primary-200",
-      "0, 191, 165"
+      "#5ac3b0"
     );
     document.documentElement.style.setProperty(
       "--color-primary-300",
@@ -266,10 +270,10 @@ function hasElementScrolledIntoView(element) {
   const elementTop = elementRect.top + window.scrollY;
   const elementBottom = elementTop + elementRect.height;
 
-  console.log(
+  /* console.log(
     `Has element ${element.className} scrolled into view? ` +
       (elementTop >= docViewTop && elementBottom <= docViewBottom)
-  );
+  ); */
 
   return elementTop >= docViewTop && elementBottom <= docViewBottom;
 }
@@ -329,3 +333,18 @@ docReady(function (event) {
     });
   });
 });
+
+
+/* --------- DYNAMICALLY GENERATE SOCIAL MEDIA META IMAGE TAG --------- */
+
+// Get the base URL dynamically
+const baseUrl = 'https://nielsenchristoffer93.github.io/portfolio';
+
+// Get the relative image path from the placeholder
+const relativeImagePath = document.getElementById('og-image-placeholder').getAttribute('content');
+
+// Construct the absolute URL
+const absoluteImageUrl = baseUrl + relativeImagePath;
+
+// Set the absolute URL as the og:image content
+document.querySelector('meta[property="og:image"]').setAttribute('content', absoluteImageUrl);
