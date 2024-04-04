@@ -92,6 +92,7 @@ docReady(function () {
 /* --------- LIGHT / DARK MODE TOGGLE --------- */
 const darkModeToggle = document.querySelector(".checkbox-label");
 const logoImg = document.getElementsByClassName("logo")[0];
+const profileImg = document.getElementsByClassName("about-section__profile-img")[0];
 const signatureImage = document.querySelector(".about-section__text-container img");
 let darkMode = false;
 darkModeToggle.addEventListener("click", () => {
@@ -99,6 +100,10 @@ darkModeToggle.addEventListener("click", () => {
     // Change logo image.
     logoImg.src = "./resources/images/CN_New_White.svg";
     logoImg.alt = "CN_New_White.svg";
+
+    // Change profile image.
+    profileImg.src = "./resources/images/cn_profile_pic_light_mode.svg";
+    profileImg.alt = "cn_profile_pic_light_mode";
 
     // Change signature Image
     signatureImage.src = "./resources/images/CN_Signature_White.svg";
@@ -181,6 +186,10 @@ darkModeToggle.addEventListener("click", () => {
     // Change logo image.
     logoImg.src = "./resources/images/CN_New_Black.svg";
     logoImg.alt = "CN_New_Black.svg";
+
+    // Change profile image.
+    profileImg.src = "./resources/images/cn_profile_pic_dark_mode.svg";
+    profileImg.alt = "cn_profile_pic_dark_mode";
 
     // Change signature Image
     signatureImage.src = "./resources/images/CN_Signature_Black.svg";

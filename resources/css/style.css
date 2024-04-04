@@ -142,7 +142,7 @@ button {
   padding: 0.6rem 1.5rem;
   font-size: 1.8rem;
   font-weight: 500;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   border: 0;
   background-color: var(--color-primary-100);
   color: var(--color-font-primary);
@@ -648,19 +648,19 @@ TIMELINE SECTION
 }
 
 .timeline ul li {
-  width: calc(30% - 2px);
+  width: calc(40% - 2px);
   clear: both;
   opacity: 0;
 }
 
 .timeline ul li:nth-child(odd) {
-  margin-left: 20%;
+  margin-left: 10%;
   padding-right: 3rem;
 }
 
 .timeline ul li:nth-child(even) {
   float: right;
-  margin-right: 20%;
+  margin-right: 10%;
   padding-left: 3rem;
 }
 

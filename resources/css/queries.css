@@ -111,6 +111,30 @@
     /*background-color: aquamarine;*/
     gap: 4rem;
   }
+
+  .timeline:before {
+    left: 0;
+  }
+
+  .timeline ul li:nth-child(odd),
+  .timeline ul li:nth-child(even) {
+    margin: 0;
+    width: 100%;
+    padding: 0 0 3rem 3rem;
+  }
+
+  .timeline ul li:last-child {
+    padding-bottom: 0;
+  }
+
+  .timeline ul li:nth-child(odd) .timeline-content::before,
+  .timeline ul li:nth-child(even) .timeline-content::before {
+    left: -3.8rem;
+  }
+
+  .timeline ul li:nth-child(odd) .timeline-content::after {
+    left: -1rem;
+  }
 }
 
 /* On screens that are 767px or less */
@@ -217,30 +241,6 @@
     grid-template-rows: 6;
     /*background-color: aquamarine;*/
     gap: 4rem;
-  }
-
-  .timeline:before {
-    left: 0;
-  }
-
-  .timeline ul li:nth-child(odd),
-  .timeline ul li:nth-child(even) {
-    margin: 0;
-    width: 100%;
-    padding: 0 0 3rem 3rem;
-  }
-
-  .timeline ul li:last-child {
-    padding-bottom: 0;
-  }
-
-  .timeline ul li:nth-child(odd) .timeline-content::before,
-  .timeline ul li:nth-child(even) .timeline-content::before {
-    left: -3.8rem;
-  }
-
-  .timeline ul li:nth-child(odd) .timeline-content::after {
-    left: -1rem;
   }
 
   .project-filter {
